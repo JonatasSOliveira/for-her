@@ -6,16 +6,32 @@ import paths from "../assets/paths.json";
 
 const routes: Array<Route> = [];
 
-for (let index = 0; index < paths.length; index++) {
-  const text = texts[index]?.text ?? "Helo World";
-  const imageName = images[index]?.image_name ?? "IMG_20220814_192711.jpg";
-  const path = paths[index]?.path ?? "/";
+let textIndex = 0;
+let imageIndex = 0;
+
+for (let pathIndex = 0; pathIndex < paths.length; pathIndex++) {
+  let text: string | undefined = texts[textIndex]?.text;
+  let imageName: string | undefined = images[imageIndex]?.image_name;
+
+  if (!text) {
+    textIndex = 0;
+    text = texts[textIndex].text;
+  }
+  if (!imageName) {
+    imageIndex = 0;
+    imageName = images[imageIndex].image_name;
+  }
+
+  const path = paths[pathIndex].path;
 
   routes.push({
     path: path,
     text: text,
     imageName: imageName,
   });
+
+  textIndex += 1;
+  imageIndex += 1;
 }
 
 export default routes;
