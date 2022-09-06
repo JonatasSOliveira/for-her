@@ -12,7 +12,7 @@ const pages = routes.map((route, index) => {
     <Route
       key={index}
       path={route.path}
-      element={<DataContainer text={route.text} imageName={route.imageName} />}
+      element={<DataContainer text={route.text} imageName={route.imageName} index={index} />}
     />
   );
 });

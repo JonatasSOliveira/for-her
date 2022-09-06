@@ -10,7 +10,7 @@ import {
 } from "./styles";
 import { DataContainerProps } from "./types";
 
-export default function DataContainer({ text, imageName }: DataContainerProps) {
+export default function DataContainer({ text, imageName, index }: DataContainerProps) {
   const [displayText, setDisplayText] = useState("");
 
   useEffect(() => {
@@ -29,12 +29,13 @@ export default function DataContainer({ text, imageName }: DataContainerProps) {
 
   return (
     <Background>
+      <Text>#{index}</Text>
       <Container>
         <ImgContainer>
           <Img src={Image} alt="Nossa Imagem" />
         </ImgContainer>
         <TextContainer>
-          <Text className="anime-typewriter">{displayText}</Text>
+          <Text>{displayText}</Text>
         </TextContainer>
       </Container>
     </Background>
