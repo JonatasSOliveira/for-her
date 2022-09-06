@@ -18,8 +18,6 @@ const pages = routes.map((route, index) => {
 });
 
 export default function Router() {
-  console.log(pages);
-
   return (
     <HashRouter>
       <Routes>

@@ -5,7 +5,7 @@ export const Background = styled.div`
   flex: 1;
   width: 100vw;
   height: 100vh;
-  background-color: #85a0aa;
+  background-color: #8da6c2;
   justify-content: center;
   align-items: center;
 `;
@@ -13,25 +13,50 @@ export const Background = styled.div`
 export const Container = styled.div`
   display: flex;
   border: 1px solid black;
-  width: 85%;
-  height: 85%;
+  background-color: #85a0aa;
+
   border-radius: 5px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 90%;
+  height: 90%;
 `;
 
 export const ImgContainer = styled.div`
-  width: 70vw;
-  height: 70vw;
   border: 1px solid black;
   border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #54656b;
+  margin: 10% 0 0 0;
+
+  @media (orientation: landscape) {
+    width: 50%;
+    height: 85%;
+  }
+
+  @media (orientation: portrait) {
+    width: 85%;
+    height: 70%;
+  }
 `;
 
 export const Img = styled.img`
   max-width: 100%;
+  max-height: 100%;
+`;
+
+export const TextContainer = styled.div`
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10%;
+`;
+
+export const Text = styled.p`
+  text-align: center;
   max-height: 100%;
 `;
