@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Background = styled.div`
   display: flex;
   flex: 1;
-  width: 100vw;
   height: 100vh;
+  flex-direction: column;
   background-color: #8da6c2;
   justify-content: center;
   align-items: center;
@@ -14,6 +14,7 @@ export const Container = styled.div`
   display: flex;
   border: 1px solid black;
   background-color: #85a0aa;
+  margin-top: 5%;
 
   border-radius: 5px;
   justify-content: center;
@@ -30,7 +31,7 @@ export const ImgContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #54656b;
-  margin: 10% 0 0 0;
+  margin: 5% 0 0 0;
 
   @media (orientation: landscape) {
     width: 50%;
